@@ -24,11 +24,14 @@ push.setVapidDetails(
 );
 
 let pushSubscription = {
-  //   endpoint: '< Push Subscription URL >',
-  //   keys: {
-  //     p256dh: '< User Public Encryption Key >',
-  //     auth: '< User Auth Secret >'
-  //   }
+  endpoint:
+    "https://fcm.googleapis.com/fcm/send/f_kOSb4h8V4:APA91bEEqsOQdckdwRuXGp-ebFutphZmCvSCFE7wocaWQMcAG911N6O29XaeTGD3lZkN3qc8Y7arsxX1B_VkGhz_KjrE_CRoLB-W9xuzDIc9tR2DUb1QYNeAqP_GNGbAx_m4rkyNGjQj",
+  expirationTime: null,
+  keys: {
+    p256dh:
+      "BJhxavt4lizuAR3MQQpHTZ9yzTxNkOc7WparLgMzOvl10hEY7eE9rT7dWdoBr66so2ZgurEEuajTX048qIwghfA",
+    auth: "Tqd8JCBjtmedOPcO3_Vw7w",
+  },
 };
 /* 
 let pushPayload = '< Push Payload String >';

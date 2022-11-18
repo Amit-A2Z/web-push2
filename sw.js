@@ -1,34 +1,27 @@
 //Service Worker module
 self.addEventListener("push", (event) => {
   try {
-    const notification = new Notification("Hello There, how you doing???", {
-      body: "This is detailed text ",
-    });
-    notification.close(() => {
-      alert("Please don't forget to act on the object");
-    });
+    console.log("Received a push message", event);
+
+    var title = "Yay a message.";
+    var body = "We have received a push message.";
+    var icon = "/images/icon-192x192.png";
+    var tag = "simple-push-demo-notification-tag";
+    var data = {
+      doge: {
+        wow: "such amaze notification data",
+      },
+    };
+
+    event.waitUntil(
+      self.registration.showNotification(title, {
+        body: body,
+        icon: icon,
+        tag: tag,
+        data: data,
+      })
+    );
   } catch (error) {
     console.log("Service Wroker levele error occurred!", error);
   }
-  // if (!(self.Notification && self.Notification.permission === "granted")) {
-  //   //DO not proceed further is permission is not granted to show the notification
-  //   return;
-  // }
-  // const data = event.data?.json() ?? {};
-  // const title = data.title || "Something Has Happened";
-  // const message =
-  //   data.message || "Here's something you might want to check out.";
-  // const icon = "./public/new-notification.png";
-
-  // const notification = new self.Notification(title, {
-  //   body: message,
-  //   tag: "simple-push-demo-notification",
-  //   icon,
-  // });
-
-  // notification.addEventListener("click", () => {
-  //   clients.openWindow(
-  //     "https://example.blog.com/2015/03/04/something-new.html"
-  //   );
-  // });
 });
