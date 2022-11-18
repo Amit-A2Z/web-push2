@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "browserify": "^17.0.0",
+    "convert-vapid-public-key": "^1.1.0",
     "dotenv": "^16.0.3",
     "web-push": "^3.5.0"
   },
