@@ -1,3 +1,6 @@
 {
-    "dotenv.enableAutocloaking": true
+  "dotenv.enableAutocloaking": true,
+  "prettier.semi": true,
+  "prettier.bracketSameLine": true,
+  "prettier.arrowParens": "always"
 }
